@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "mutalaa": {
+      "type": "http",
+      "url": "https://mutalaa.tr/mcp"
+    }
+  }
+}
