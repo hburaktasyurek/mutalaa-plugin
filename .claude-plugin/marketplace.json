@@ -1,15 +1,15 @@
 {
   "name": "mutalaa",
-  "description": "Mütalaa plugins for Turkish law, tax legislation and case law research.",
+  "description": "Türk hukuku, mevzuat, içtihat ve vergi araştırması için Mütalaa eklentisi.",
   "owner": {
     "name": "Hasan Burak Taşyürek",
-    "email": "admin@hbglobal.dev"
+    "email": "admin@mutalaa.tr"
   },
   "plugins": [
     {
       "name": "mutalaa",
       "source": "./",
-      "description": "Research Turkish law, tax legislation and case law through primary sources, including legislation, legislative rationales, Yargıtay, Danıştay, AYM and GİB private tax rulings, with source links and citations.",
+      "description": "Hukuk, mevzuat, içtihat ve vergi araştırması resmi kaynaktan. Kanun ve madde metni, Yargıtay, Danıştay ve Anayasa Mahkemesi kararı, GİB özelge araması tek yerde.",
       "keywords": [
         "turkish-law",
         "legal-research",

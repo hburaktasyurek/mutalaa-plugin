@@ -1,87 +1,77 @@
-# Mütalaa: Hukuk, Vergi, İçtihat
+# Mütalaa: Hukuk, Mevzuat, İçtihat ve Vergi
 
-Research Turkish law (hukuk), tax and fiscal legislation (vergi ve mali
-mevzuat), and case law (içtihat) through primary sources. Find legislation,
-article texts, legislative rationales, Yargıtay and Danıştay judgments,
-Constitutional Court (AYM) decisions, and Turkish Revenue Administration
-(GİB) private tax rulings. Read and compare source texts, legal concepts,
-provisions, judicial reasoning and administrative interpretations with citations.
+Mütalaa, Türk hukuku için mevzuat ve içtihat araştırmasını Claude'a getirir.
+Kanun, madde metni ve gerekçe resmi kaynaktan aranıp okunur. Yargıtay, Danıştay,
+bölge adliye, ilk derece hukuk mahkemesi ve Anayasa Mahkemesi (AYM) için emsal
+karar araması yapılabilir. Vergi sorularında GİB özelge araması da var. Claude
+cevabında kaynağın bağlantısını verebilir.
 
-Mütalaa supports legal interpretation, academic and professional research,
-regulatory compliance research, rights and obligations, disputes, and legal
-remedies across Turkish public and private law. Coverage includes civil,
-commercial, obligations, property, family, inheritance, employment, consumer,
-criminal, administrative, constitutional and tax law, subject to the sources
-available. Turkish search terms include mevzuat, kanun, yasa, yönetmelik,
-gerekçe, içtihat, emsal karar, özelge and hak arama.
+Bu eklenti, Mütalaa bağlantısının yanına dört Türkçe skill ekler. Skill'ler
+soruyu mevzuat, karar ya da özelge aramasına yönlendirir. Sonuca varmadan önce
+ilgili metni okutur, kaynak hatalarını ve kota sınırlarını açıklar. Borçlar
+hukuku, ticaret hukuku, iş hukuku, aile hukuku, miras hukuku, ceza hukuku,
+idare hukuku, vergi hukuku ve anayasa hukuku gibi alanlarda kullanılabilir.
 
-## Connect and research
+## Kurulum
 
-In Claude Code, add this repository's marketplace and install Mütalaa:
+Claude'da Customize sayfasındaki eklentiler bölümünden Mütalaa'yı ekleyin.
+Bağlanırken Mütalaa giriş sayfası açılır. Hesabınız yoksa orada açabilirsiniz.
+
+Claude Code'da:
 
 ```text
 /plugin marketplace add hburaktasyurek/mutalaa-plugin
 /plugin install mutalaa@mutalaa
 ```
 
-Open `/mcp`, select the Mütalaa connection, and authenticate with your Mütalaa
-account through OAuth. Start a new session and ask your legal research question.
-The plugin uses the existing remote server at https://mutalaa.tr/mcp.
-No local Python service, API key or additional runtime is required by this
-plugin. A direct repository install does not establish Anthropic directory
-approval.
+Ardından `/mcp` içinde Mütalaa bağlantısını seçip Mütalaa hesabınızla giriş
+yapın ve yeni bir oturumda sorunuzu sorun. Videolu kurulum rehberi
+https://mutalaa.tr/start adresinde.
 
-Four Turkish workflow skills and four Turkish reference files are bundled.
-They load through the host's skill mechanism without MCP resource reads or
-private user files. Explanations follow the user's language;
-Turkish source terms, tool names and official identifiers retain their spelling.
+## Neler gönderilir
 
-The workflows route a question to legislation, case law or tax ruling research,
-read the relevant text before drawing conclusions, and explain source errors
-and quotas. They do not file applications, access private case files or perform
-financial transactions.
+Araç çağrıları arama terimlerini, filtreleri ve herkese açık belge
+kimliklerini, giriş yapılmış hesapla https://mutalaa.tr/mcp adresindeki
+Mütalaa sunucusuna gönderir. Sunucu metinleri kamu kurumlarının herkese açık
+kaynaklarından getirir. Mütalaa arama metnini saklamaz. Konu, alt konu ve amaç
+alanları yalnız kullanım istatistiği için kaydedilir. Ayrıntılar gizlilik
+politikasında (https://mutalaa.tr/legal).
 
-## Data and authentication
+Sorularınıza müvekkil adı ve dosya ayrıntısı yazmayın. Skill'ler modele araç
+girdilerini anonimleştirmesini söyler, ama sunucu kişisel veriyi ayrıca
+temizlemez. Paket kimlik bilgisi, yerel sunucu, kurulum betiği ya da kanca
+içermez.
 
-Tool calls send the required search terms, filters and public document
-identifiers to the declared Mütalaa server using the authenticated account.
-The server retrieves legal material from the public sources supported by
-Mütalaa. Account and usage processing is described in the
-[privacy policy and terms](https://mutalaa.tr/legal).
+## Kapsam
 
-Remove identifying or confidential case details before making a request.
-The skills instruct the model to anonymize tool arguments; this is a model
-instruction, not a guarantee that a server-side sanitizer removes personal data.
-The package contains no credentials, local server, lifecycle hooks or install
-scripts.
+Mütalaa hukuki bilgi ve kaynak araştırması sunar, avukatlık hizmeti vermez.
+Ceza istinafı ve bölge idare mahkemesi araması, UYAP'taki kişisel dosyalar ve
+yalnız yabancı hukuka dair araştırma bu sürümün dışında.
 
-## Sources and limits
+## Yayıncı ve destek
 
-Supported public court sources include Yargıtay, Danıştay, regional appellate
-civil courts, first-instance civil courts, the kanun yararına bozma collection,
-and the Constitutional Court (AYM), including constitutional review and
-individual applications. A GİB private ruling is an administrative view, not a
-court judgment. Criminal appellate and regional administrative court searches,
-private UYAP files and foreign-law-only research are outside this release.
+- Yayıncı Hasan Burak Taşyürek
+- Destek admin@mutalaa.tr
+- Web sitesi https://mutalaa.tr
+- Gizlilik politikası ve kullanım koşulları https://mutalaa.tr/legal
 
-Mütalaa is a legal research aid, not a lawyer or a guarantee of complete,
-historical or immediately updated coverage. Read relevant source texts before
-relying on search results. Do not send identifying or confidential case details.
-OAuth, quotas and source availability still apply.
+## English
 
-## Publisher and support
+Mütalaa brings Turkish law, legislation and case law research into Claude.
+Search and read laws, article texts and legislative rationales, court decisions
+from Yargıtay, Danıştay, regional appellate and first-instance civil courts and
+the Constitutional Court (AYM), and GİB private tax rulings, with source links.
+This plugin adds four Turkish workflow skills to the Mütalaa connector at
+https://mutalaa.tr/mcp, which users sign in to with OAuth.
 
-The individual publisher and service provider is Hasan Burak Taşyürek. HB Global
-is the brand he uses.
+Tool calls send search terms, filters and public document identifiers to the
+Mütalaa server with the signed-in account. The server retrieves texts from the
+public sources of Turkish public institutions. Search text is not stored.
+Topic, subtopic and purpose fields are recorded only for usage statistics. The
+package contains no credentials, local server, install scripts or hooks.
 
-- [Website](https://mutalaa.tr)
-- [Support](https://mutalaa.tr/legal): admin@hbglobal.dev
-- [Privacy policy](https://mutalaa.tr/legal)
-- [Terms](https://mutalaa.tr/legal)
+## Lisans
 
-## License
-
-The MIT grant in `LICENSE` covers the skill/reference Markdown and plugin/MCP
-manifest JSON. Mütalaa names, logos and `assets/` are excluded; no trademark or
-branding rights are granted. The private backend is not included. This README
-is installation documentation.
+`LICENSE` içindeki MIT izni, skill ve referans Markdown dosyalarını ve eklenti
+ile MCP manifest JSON dosyalarını kapsar. Mütalaa adı, logosu ve `assets/`
+klasörü bu iznin dışındadır, marka hakkı verilmez. Sunucu kodu bu pakette yok.
