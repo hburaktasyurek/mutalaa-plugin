@@ -1,10 +1,10 @@
 {
   "name": "mutalaa",
-  "version": "0.1.1",
-  "description": "Research Turkish law, tax legislation and case law through primary sources, including legislation, legislative rationales, Yargıtay, Danıştay, AYM and GİB private tax rulings, with source links and citations.",
+  "version": "0.1.2",
+  "description": "Hukuk, mevzuat, içtihat ve vergi araştırması resmi kaynaktan. Kanun ve madde metni, Yargıtay, Danıştay ve Anayasa Mahkemesi kararı, GİB özelge araması tek yerde.",
   "author": {
     "name": "Hasan Burak Taşyürek",
-    "email": "admin@hbglobal.dev",
+    "email": "admin@mutalaa.tr",
     "url": "https://mutalaa.tr"
   },
   "homepage": "https://mutalaa.tr",
@@ -42,10 +42,10 @@
     "danıştay",
     "özelge"
   ],
-  "displayName": "Mütalaa: Hukuk, Vergi, İçtihat",
+  "displayName": "Mütalaa: Hukuk, Mevzuat, İçtihat ve Vergi",
   "icon": "./assets/mutalaa-icon.png",
-  "documentationUrl": "https://github.com/hburaktasyurek/mutalaa-plugin#readme",
-  "supportUrl": "https://mutalaa.tr/legal",
+  "documentationUrl": "https://mutalaa.tr/start",
+  "supportUrl": "https://mutalaa.tr/start",
   "privacyPolicyUrl": "https://mutalaa.tr/legal",
   "termsOfServiceUrl": "https://mutalaa.tr/legal"
 }

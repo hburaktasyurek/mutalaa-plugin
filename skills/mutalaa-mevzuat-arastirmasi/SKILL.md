@@ -38,7 +38,7 @@ Bu kontrolü her yeni çağrıda, sorgu değişikliğinde ve tekrar denemede uyg
 - Madde bilinmiyorsa `mevzuat_icinde_ara` ile kısa bir sorgu kullan. `AND`, `OR`, `NOT`, parantez ve tırnaklı ifade desteklenir. Sonuç alıntısı yerine ilgili maddeyi ayrıca oku.
 - Yapı gerekli olduğunda `mevzuat_yapisini_getir` kullan. Bu yapı metinden çıkarılır; resmî yayımlanmış bağımsız ağaç veya eksiksizlik garantisi diye tanıtma.
 - Tam metin, başlangıç hükümleri veya ayrıştırılamayan madde gerektiğinde `belge_getir(belge_kimligi=…)` kullan. Metin içinde arama madde parçalarına dayanabilir; boş sonuç belgenin her yerinde ifadenin bulunmadığını tek başına kanıtlamaz.
-- `next_page` veya `has_more` varsa ilgili metin henüz tamamlanmamıştır. Gerekçe, istisna, atıf veya hükmün devamını okumadan kesin sonuç çıkarma. `belge_getir` ve madde aracında sayfa boyutu karakter sayısıdır; arama/yapı araçlarında sonuç sayısıdır.
+- `next_page` veya `has_more` varsa ilgili metin henüz tamamlanmamıştır. Gerekçe, istisna, atıf veya hükmün devamını okumadan kesin sonuç çıkarma. `belge_getir` ve madde aracında sayfa boyutu en fazla 20000 karakterdir; arama/yapı araçlarında sonuç sayısıdır.
 
 ## Zaman ve sonuç
 
